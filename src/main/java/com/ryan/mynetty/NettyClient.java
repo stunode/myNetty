@@ -33,7 +33,7 @@ public class NettyClient {
                     .channel(NioSocketChannel.class)
                     .handler(new ChannelInitializer<NioSocketChannel>() {
                         protected void initChannel(NioSocketChannel ch) throws Exception {
-                            ch.pipeline().addLast(new StringDecoder());
+//                            ch.pipeline().addLast(new StringDecoder());
                             ch.pipeline().addLast(new MyClientHandler());
                         }
                     });
